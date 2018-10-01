@@ -1,0 +1,17 @@
+version: 0.1
+
+phases:
+  build:
+    commands:
+    - chmod +x gradlew
+    - ./gradlew clean build buildZip
+    - cp template.yml build/template.yml
+    - mv ./build/distributions/PrimeCheck*.zip build/app.zip
+  post_build:
+    commands:
+    - aws cloudformation package --template-file template.yml --output-template-file output-template.yml
+
+artifacts:
+  files:
+  - output-template.yml
+  discard-paths: yes
