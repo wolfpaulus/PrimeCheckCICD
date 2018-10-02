@@ -30,7 +30,7 @@ jacocoTestReport {
     }
 }
 
-task buildZip(type: Zip, dependsOn: [test,jacocoTestReport]) {
+task buildZip(type: Zip, dependsOn: [build]) {
     from compileJava
     from processResources
     into('lib') {

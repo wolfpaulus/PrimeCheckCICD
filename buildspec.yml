@@ -4,9 +4,7 @@ phases:
   build:
     commands:
     - chmod +x gradlew
-    - ./gradlew clean build buildZip
-    - cp template.yml build/template.yml
-    - mv ./build/distributions/Prime*.zip build/app.zip
+    - ./gradlew buildZip
   post_build:
     commands:
     - aws cloudformation package --s3-bucket com.techcasita.s3.bucket --template-file template.yml --output-template-file output-template.yml

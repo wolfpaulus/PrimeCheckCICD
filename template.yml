@@ -1,29 +1,13 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: P4 PrimeCheck Serverless App
-Parameters:
-  ArtifactBucket:
-    Default: com.techcasita.s3.bucket
-    Description: The name of the artifacts bucket
-    Type: String
-  FunctionName:
-    Default: primecheck-cicd
-    Description: The name of the Lambda function
-    Type: String
-  HandlerClass:
-    Default: com.techcasita.lambda.Prime
-    Description: The Java class that impl. HandlerInterface
-    Type: String
-
 Resources:
   PostFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri:
-        Bucket: !Sub ${ArtifactBucket}
-        Key: build/app.zip
-      FunctionName: !Sub ${FunctionName}
-      Handler: !Sub ${HandlerClass}
+      CodeUri: build/distributions/PrimeCICD-1.0.zip
+      FunctionName: primecheck-cicd
+      Handler: com.techcasita.lambda.Prime
       Runtime: java8
       Timeout: 10
       MemorySize: 512
@@ -31,5 +15,5 @@ Resources:
         PostEvent:
           Type: Api
           Properties:
-            Path: /pc
+            Path: /
             Method: post
