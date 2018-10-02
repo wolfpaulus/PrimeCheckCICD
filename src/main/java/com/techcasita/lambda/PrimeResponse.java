@@ -7,14 +7,16 @@ package com.techcasita.lambda;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.Date;
+
 @SuppressWarnings({"WeakerAccess", "unused"})
 public class PrimeResponse {
     private static final Logger log = LogManager.getLogger(PrimeResponse.class);
     private final String tag = "PrimeCheck P4";
+    private final String timeStamp = new Date().toString();
     private final String answer;
     private long n;
     private long d;
-
     public PrimeResponse(final long n, final long d) {
         this.n = n;
         this.d = d;

@@ -28,8 +28,8 @@ opening the [AWS API Gateway WebUI](https://us-west-2.console.aws.amazon.com/api
 in the dashboard view. E.g.: https://gffnscm1mh.execute-api.us-west-2.amazonaws.com/Prod/
 Since the API is available as an HTTPS POST, a request like this:
 
-curl -d "{\"number\":17}" https://gffnscm1mh.execute-api.us-west-2.amazonaws.com/Prod/
+curl -d "{\"number\":17}" https://3cu12lrona.execute-api.us-west-2.amazonaws.com/Prod/
 
 returned this response:
 
-{"tag":"PrimeCheck P3","answer":"Yes, 17 is a prime number, divisible only by itself and 1","n":17,"d":1}
+{"tag":"PrimeCheck P4","answer":"Yes, 17 is a prime number, divisible only by itself and 1","n":17,"d":1}
