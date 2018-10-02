@@ -3,7 +3,7 @@ Transform: AWS::Serverless-2016-10-31
 Description: P4 PrimeCheck Serverless App
 Parameters:
   ArtifactBucket:
-    Default: dccuser-bucket
+    Default: com.techcasita.s3.bucket
     Description: The name of the artifacts bucket
     Type: String
   FunctionName:

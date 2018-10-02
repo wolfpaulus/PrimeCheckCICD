@@ -10,7 +10,7 @@ Resources:
       Handler: com.techcasita.lambda.Prime
       Runtime: java8
       CodeUri:
-        Bucket: dccuser-bucket
+        Bucket: com.techcasita.s3.bucket
         Key: build/app.zip
       MemorySize: 1024
       Timeout: 60

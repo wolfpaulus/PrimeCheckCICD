@@ -9,7 +9,7 @@ phases:
     - mv ./build/distributions/Prime*.zip build/app.zip
   post_build:
     commands:
-    - aws cloudformation package --s3-bucket codepipeline-us-west-2-358987914269 --template-file template.yml --output-template-file output-template.yml
+    - aws cloudformation package --s3-bucket com.techcasita.s3.bucket --template-file template.yml --output-template-file output-template.yml
 artifacts:
   files:
   - output-template.yml
