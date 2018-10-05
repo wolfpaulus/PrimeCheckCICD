@@ -15,6 +15,7 @@ public class PrimeResponse {
     private final String tag = "PrimeCheck P4";
     private final String theStamp = new Date().toString();
     private final String answer;
+    private final String copyright = "(c) 2018 GCCCD";
     private long n;
     private long d;
     public PrimeResponse(final long n, final long d) {
