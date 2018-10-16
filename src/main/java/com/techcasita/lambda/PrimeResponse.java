@@ -13,9 +13,7 @@ import java.util.Date;
 public class PrimeResponse {
     private static final Logger log = LogManager.getLogger(PrimeResponse.class);
     private final String tag = "PrimeCheck P4";
-    private final String theStamp = new Date().toString();
     private final String answer;
-    private final String copyright = "(c) 2018 GCCCD";
     private long n;
     private long d;
     public PrimeResponse(final long n, final long d) {
