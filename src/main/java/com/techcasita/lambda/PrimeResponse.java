@@ -14,6 +14,7 @@ public class PrimeResponse {
     private static final Logger log = LogManager.getLogger(PrimeResponse.class);
     private final String tag = "PrimeCheck P4";
     private final String answer;
+    private final String timestamp = new Date().toString();
     private long n;
     private long d;
     public PrimeResponse(final long n, final long d) {
