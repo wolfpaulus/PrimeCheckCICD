@@ -13,6 +13,8 @@ public class PrimeResponse {
     private static final Logger log = LogManager.getLogger(PrimeResponse.class);
     private final String tag = "PrimeCheck P4";
     private final String answer;
+    private final String stamp = new Date().toString();
+    
     private long n;
     private long d;
 
